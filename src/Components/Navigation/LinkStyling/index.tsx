@@ -13,7 +13,7 @@ const LinkStyling = (props: LinkProps) => {
     <Link
         className={'links' + (props.propsClass || '')}
         style={{
-        textDecoration: 'solid underline overline',
+        textDecoration: 'none',
         ...(props.propsStyle || {})
         }}
         to={props.to}
