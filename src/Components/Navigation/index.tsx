@@ -1,12 +1,13 @@
 import React from 'react'
-import NavLinks from './NavLinks'
 import "../Navigation/Navigation.css"
+import LinkStyling from './LinkStyling'
+import { Layout } from 'antd'
 
 const Navigation = () => {
     return (
-    <div className="navigation-section">
-        <NavLinks />
-    </div>
+    <Layout>
+        <LinkStyling />
+    </Layout>
     )
 }
 
