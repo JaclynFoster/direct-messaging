@@ -12,6 +12,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: white;
 }
 
 .profile-pic {
@@ -20,5 +21,9 @@
     align-items: center;
     width: 100%;
     justify-content: space-evenly;
+    color: white;
 }
 
+.welcome {
+    color: white;
+}
