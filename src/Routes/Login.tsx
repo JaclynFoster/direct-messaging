@@ -1,5 +1,6 @@
 import { Button, Checkbox, Form, Input } from 'antd'
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 interface FieldType {
     username?: string;
@@ -8,6 +9,10 @@ interface FieldType {
 }
 
 const Login = () => {
+    const navigate = useNavigate()
+    const  signupHandler = () => {
+        navigate('/signup', {replace: true})
+    }
     return (
 
         <div className="login-container">
@@ -41,7 +46,7 @@ const Login = () => {
             </Form>
             <div>
                 <h1>New User?</h1>
-                <Button>Signup</Button>
+                <Button onClick={() => signupHandler()}>Signup</Button>
             </div>
 
     </div>
