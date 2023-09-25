@@ -1,0 +1,47 @@
+.subject-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.badge {
+    background-color: red;
+    color: white;
+    padding: 5px;
+    border-radius: 25px;
+}
+
+.badge-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+
+.convo-img {
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid grey;
+}
+
+.individual-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(128, 128, 128, 0.669);
+}
+
+.badge-pre {
+    overflow: hidden;
+    margin: 0;
+    opacity: 0.4;
+    white-space: pre-line;
+}
+
+.flex-container {
+    padding: 15px;
+    margin-left: 5px;
+}

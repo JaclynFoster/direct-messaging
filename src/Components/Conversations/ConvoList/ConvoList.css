@@ -1,0 +1,12 @@
+.convoList-container {
+    width: 35%;
+}
+
+.newMessage-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
