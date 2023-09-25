@@ -4,15 +4,16 @@ import './App.css';
 import Navigation from './Components/Navigation';
 import Router from './Routes/Router';
 import {Routes} from 'react-router'
+import { Layout } from 'antd';
 
 function App() {
   return (
-    <div className="App">
+    <Layout>
       <Navigation />
 
       {Router()}
       
-    </div>
+    </Layout>
   );
 }
 

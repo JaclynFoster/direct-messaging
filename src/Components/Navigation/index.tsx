@@ -5,9 +5,9 @@ import { Layout } from 'antd'
 
 const Navigation = () => {
     return (
-    <Layout>
+    <div>
         <LinkStyling />
-    </Layout>
+    </div>
     )
 }
 
