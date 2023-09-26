@@ -22,22 +22,9 @@ import { FiUsers, FiMessageSquare, FiLogOut } from 'react-icons/fi'
 
 
 const LinkStyling = () => {
-    const [open, setOpen] = useState(false)
-
-    const openDrawer = () => {
-    setOpen(true)
-    }
-    const onClose = () => {
-    setOpen(false)
-    }
-    return (
-    <Sider>
-        <Button onClick={openDrawer}>
-        {true ? <AiOutlineMenuUnfold /> : <AiOutlineMenuFold />}
-        </Button>
-        <Drawer placement="left" onClose={onClose} open={open}>
-        <Menu theme="dark" mode="inline">
-            <Divider />
+ 
+    return (  
+        <Menu theme="light" mode="inline">
             <AiOutlineMenu />
             <h1>Menu:</h1>
             <Menu.Item key="1">
@@ -80,6 +67,7 @@ const LinkStyling = () => {
               {/* <Link to="/calendar"/> */}
             </Menu.Item>
             </Menu>
+            <Divider />
             <Menu theme="dark" mode="inline">
             <AiOutlineSetting />
             <h1>Settings:</h1>
@@ -95,8 +83,7 @@ const LinkStyling = () => {
             </Menu.Item>
             </Menu>
         </Menu>
-        </Drawer>
-    </Sider>
+ 
     )
 }
 

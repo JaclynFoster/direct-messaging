@@ -5,7 +5,7 @@ import { FaRegFaceGrinTongueWink } from 'react-icons/fa6'
 
 const Headline = () => {
     return (
-        <Sider>
+        <div>
 
         <h1 className="welcome">WELCOME</h1>
         <Divider />
@@ -16,7 +16,7 @@ const Headline = () => {
             <span>My Tagline</span>
         </div>
         </div>
-        </Sider>
+        </div>
     )
 }
 
