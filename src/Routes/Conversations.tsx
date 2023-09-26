@@ -3,14 +3,18 @@ import SearchMessages from '../Components/Conversations/SearchMessages'
 import '../Components/Conversations/Conversations.css'
 import { Content } from 'antd/es/layout/layout'
 import ConvoList from '../Components/Conversations/ConvoList'
+import Messaging from '../Components/Conversations/Messaging'
 
 const Conversations = () => {
     return (
     <Content>
       {/* Conversations page will have a nested routes link for when the user clicks on specific conversations allowing user to access chat messaging */}
     <SearchMessages />
-    <ConvoList />
+    <div className="messaging-flex">
 
+    <ConvoList />
+    <Messaging />
+    </div>
     </Content>
     )
 }
