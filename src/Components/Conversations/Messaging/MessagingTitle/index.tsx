@@ -5,7 +5,7 @@ AiOutlineVideoCamera,
 AiOutlineSetting
 } from 'react-icons/ai'
 import { HiOutlineBellAlert } from 'react-icons/hi2'
-import '../Messaging.css'
+import './MessagingTitle.css'
 
 const MessagingTitle = () => {
 return (

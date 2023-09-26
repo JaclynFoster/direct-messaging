@@ -1,0 +1,34 @@
+.messaging-imgs {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+.messaging-title-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 14px;
+}
+
+.settings-icon {
+    font-size: 20px;
+}
+
+.messaging-settings-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 30%;
+}
+
+.messaging-users-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 15px;
+}

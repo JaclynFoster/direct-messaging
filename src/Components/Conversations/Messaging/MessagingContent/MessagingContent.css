@@ -1,0 +1,57 @@
+
+
+.inbound-container {
+    float: left;
+    width: 100%;
+    padding: 1rem;
+}
+
+.inbound-user-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    width: 50%;
+}
+
+.inbound-text {
+    padding: 1rem;
+    border: 1px solid rgb(57, 52, 81);
+    background-color: rgba(79, 113, 214, 0.682);
+    border-radius: 15px;
+    width: 50%;
+}
+
+.inbound-user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.outbound-container {
+    float: right;
+    width: 100%;
+    padding: 1rem;
+}
+
+.outbound-timestamp {
+    float: right;
+    padding-right: 10px;
+}
+
+.outbound-user-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.outbound-text {
+    padding: 1rem;
+    border: 1px solid rgb(103, 103, 104);
+    background-color: rgba(215, 216, 218, 0.682);
+    border-radius: 15px;
+    width: 50%;
+    margin-top: 7px;
+}
