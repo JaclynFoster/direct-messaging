@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Menu, Divider, Button, Drawer } from 'antd'
 import Sider from 'antd/es/layout/Sider'
-import { FaRegFaceGrinTongueWink } from 'react-icons/fa6'
+
 import {
     AiOutlineHome,
     AiOutlineCalendar,
@@ -20,6 +20,7 @@ import {
 } from 'react-icons/md'
 import { FiUsers, FiMessageSquare, FiLogOut } from 'react-icons/fi'
 
+
 const LinkStyling = () => {
     const [open, setOpen] = useState(false)
 
@@ -30,16 +31,7 @@ const LinkStyling = () => {
     setOpen(false)
     }
     return (
-    <div>
-        <h1 className="welcome">WELCOME</h1>
-        <Divider />
-        <div className="profile-pic">
-        <FaRegFaceGrinTongueWink />
-        <div className="tagline">
-            <label>First Last</label>
-            <span>My Tagline</span>
-        </div>
-        </div>
+    <Sider>
         <Button onClick={openDrawer}>
         {true ? <AiOutlineMenuUnfold /> : <AiOutlineMenuFold />}
         </Button>
@@ -104,7 +96,7 @@ const LinkStyling = () => {
             </Menu>
         </Menu>
         </Drawer>
-    </div>
+    </Sider>
     )
 }
 
