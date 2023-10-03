@@ -1,9 +1,9 @@
 import jwt from 'jsonwebtoken'
-// import bcrypt from 'bcryptjs'
+import * as bcrypt from 'bcryptjs'
 import * as dotenv from 'dotenv'
 dotenv.config({ path: __dirname + '/.env' })
 import { queryInvoke } from '../services/pg'
-import { comparePassword } from '../authentication/authentication'
+import { comparePassword, encryptPassword } from '../authentication/authentication'
 
 const SECRET = process.env.SECRET
 
@@ -44,4 +44,34 @@ export const getUser = async (req, res) => {
         }
 
 }
+
+export const createUser = async (req, res) => {
+    const { first_name, last_name, email, username, password } = req.body
+    console.log('Create User req.body', req.body)
+    try {
+    const dbUser = await queryInvoke(
+      `SELECT * FROM users WHERE username = $1`,
+        [username]
+    )
+    console.log('dbUser exists:', dbUser.rows.length)
+    if (dbUser.rows.length > 0) {
+        res.status(400).send('Username already exists.')
+        return
+    } else {
+        const hashPass = encryptPassword(password)
+        const response = await queryInvoke(
+        `INSERT INTO users (first_name, last_name, email, username, password)
+                VALUES ($1, $2, $3, $4, $5)`,
+        [first_name, last_name, email, username, password]
+        )
+        let token = generateToken(req.body)
+        console.log('CreateUser Token:', token)
+        res.status(200).send({ token, data: response.rows[0] })
+    }
+    } catch (error) {
+    console.log('Error CreateUser:', error)
+    res.sendStatus(500)
+    }
+}
+
 
